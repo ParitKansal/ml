@@ -81,7 +81,7 @@
 
 ## **Feature Scaling**
 #### 1. Standardization
-   - Formula: \\(x' = \frac{x - \text{mean}(x)}{\sigma}\\)
+   - Formula: $x' = \frac{x - \text{mean}(x)}{\sigma}$
    - Standardized data has a mean of 0 and a standard deviation of 1.
    - Useful when features are on different scales; works well with algorithms that assume normal distribution.
 
