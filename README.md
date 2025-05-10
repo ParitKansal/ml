@@ -83,7 +83,7 @@
 #### 1. Standardization
    - Formula:
 ```math
-x' = \frac{x - \text{mean}(x)}{\sigma}$
+x' = \frac{x - \text{mean}(x)}{\sigma}
 ```
 
    - Standardized data has a mean of 0 and a standard deviation of 1.
