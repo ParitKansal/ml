@@ -3,9 +3,6 @@ layout: default
 title: Home
 ---
 
-- Formula: 
-  $$x' = \frac{x - \text{median}(x)}{\text{IQR}}$$
-
 
 ## Content
 - **Data Preprocessing**
@@ -104,8 +101,9 @@ title: Home
    
 - **Max Abs Scaling**: Divides each value by the maximum absolute value in the feature, scaling between -1 and 1.
 
-  	- Formula: $x' = \frac{x}{max(|x|)}$
-       	
+  	- Formula: 
+  	  $$x' = \frac{x}{max(|x|)}$$
+
 	- **Works well with sparse data.**
 
 - **Robust Scaling**: Uses the Interquartile Range (IQR) instead of min and max, making it less sensitive to outliers.
