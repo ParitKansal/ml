@@ -95,17 +95,18 @@ title: Home
 - **Min-Max Scaling**: Scales data to a fixed range, typically [0, 1] or [-1, 1].
 
 	$$x' = \frac{x - \text{min}(x)}{\text{max}(x) - \text{min}(x)}$$
- 	- **Used for data where negative and positive values are known.**
+ 	- Used for data where negative and positive values are known.
    
 - **Max Abs Scaling**: Divides each value by the maximum absolute value in the feature, scaling between -1 and 1.
 
 	$$x' = \frac{x}{max(|x|)}$$
-	- **Works well with sparse data.**
+	- Works well with sparse data
 
 - **Robust Scaling**: Uses the Interquartile Range (IQR) instead of min and max, making it less sensitive to outliers.
 
 	$$x' = \frac{x - \text{median}(x)}{\text{IQR}}$$
-	- **Works well with outliers.**
+	- Works well with outliers
+
 ---
 ---
 
@@ -167,21 +168,14 @@ title: Home
 - #### Steps in Quantile Transformation
 	1. **Sort the Data:**
 	   First, the data is sorted in ascending order
-	
 	2. **Calculate the Rank (or Percentile) for Each Data Point:**
 	   $$r_i = \frac{i}{n}$$
 	   where $$i$$ is the index of the data point in the sorted list (starting from 1).
-	
 	3. **Map the Quantiles to a New Distribution:**
 	   - **Uniform Distribution**: The simplest form of quantile transformation is to map the ranks directly to a uniform distribution over the range [0, 1]. The transformed value $$y_i$$ of $$x_i$$ is:
 	     $$y_i = r_i = \frac{i}{n}$$
-	
 	   - **Normal Distribution**: If you want to transform the data into a normal distribution, you would map the quantiles $$r_i$$ to a corresponding value from the **inverse cumulative distribution function (CDF)** of the standard normal distribution $$\Phi^{-1}(r_i)$$.
-  		
-    		The transformed value $$y_i$$ becomes:
-
-	      $$y_i = \Phi^{-1}(r_i)$$ where $$\Phi^{-1}(r_i)$$ is the inverse of the normal CDF at the quantile $$r_i$$. This maps the data to a normal distribution with mean 0 and variance 1.
-	
+           - The transformed value $$y_i$$ becomes: $$y_i = \Phi^{-1}(r_i)$$ where $$\Phi^{-1}(r_i)$$ is the inverse of the normal CDF at the quantile $$r_i$$. This maps the data to a normal distribution with mean 0 and variance 1.
 	4. **Handling Ties:**
 	   If there are duplicate values (ties) in the data, the rank $$r_i$$ is calculated by averaging the ranks of the tied values. This ensures that the transformed data remains consistent.
 
