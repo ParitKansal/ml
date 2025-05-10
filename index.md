@@ -3,7 +3,9 @@ layout: default
 title: Home
 ---
 
-$$$$515$$$$
+- Formula: 
+  $$x' = \frac{x - \text{median}(x)}{\text{IQR}}$$
+
 
 ## Content
 - **Data Preprocessing**
