@@ -3,6 +3,8 @@ layout: default
 title: Home
 ---
 
+$$x' = \frac{x}{max(|x|)}$$
+
 
 ## Content
 - **Data Preprocessing**
