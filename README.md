@@ -1,3 +1,7 @@
+---
+layout: default
+title: My Page Title
+---
 
 ## Content
 - **Data Preprocessing**
