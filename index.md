@@ -102,7 +102,7 @@ $$$$515$$$$
    
 - **Max Abs Scaling**: Divides each value by the maximum absolute value in the feature, scaling between -1 and 1.
 
-  	- Formula: $$x' = \frac{x}{max(|x|)}$$
+  	- Formula: $x' = \frac{x}{max(|x|)}$
        	
 	- **Works well with sparse data.**
 
