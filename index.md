@@ -85,26 +85,26 @@ title: Home
 
 ## **Feature Scaling**
 #### 1. Standardization
-$$x' = \frac{x - \text{mean}(x)}{\sigma}$$
-
+   
+   $$x' = \frac{x - \text{mean}(x)}{\sigma}$$
    - Standardized data has a mean of 0 and a standard deviation of 1.
    - Useful when features are on different scales; works well with algorithms that assume normal distribution.
 
 #### 2. Normalization
 
 - **Min-Max Scaling**: Scales data to a fixed range, typically [0, 1] or [-1, 1].
-$$x' = \frac{x - \text{min}(x)}{\text{max}(x) - \text{min}(x)}$$
 
+	$$x' = \frac{x - \text{min}(x)}{\text{max}(x) - \text{min}(x)}$$
  	- **Used for data where negative and positive values are known.**
    
 - **Max Abs Scaling**: Divides each value by the maximum absolute value in the feature, scaling between -1 and 1.
-$$x' = \frac{x}{max(|x|)}$$
 
+	$$x' = \frac{x}{max(|x|)}$$
 	- **Works well with sparse data.**
 
 - **Robust Scaling**: Uses the Interquartile Range (IQR) instead of min and max, making it less sensitive to outliers.
-$$x' = \frac{x - \text{median}(x)}{\text{IQR}}$$
-       	
+
+	$$x' = \frac{x - \text{median}(x)}{\text{IQR}}$$
 	- **Works well with outliers.**
 ---
 ---
